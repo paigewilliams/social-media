@@ -1,0 +1,15 @@
+<h1><%= @user.name %></h1>
+
+<%= form_tag (links_path(@user)) do %>
+  <%= label_tag(:url, "Url:") %>
+  <%= text_field_tag(:url) %>
+  <%= submit_tag("Share Link") %>
+<% end %>
+
+
+<ul>
+  <% @links.each do |link| %>
+
+  <li><%= link.url %></li>
+  <% end %>
+</ul>
