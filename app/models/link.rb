@@ -3,4 +3,9 @@ class Link < ActiveRecord::Base
 
   validates :user_id, :url, :presence => true
 
+  def plus_one
+    self.rating += 1
+
+  end
+
 end

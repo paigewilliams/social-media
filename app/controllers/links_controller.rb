@@ -16,8 +16,19 @@ class LinksController < ApplicationController
     end
   end
 
+  def edit
+    binding.pry
+  end
+
   def show
     @link = Link.find(params[:id])
   end
+
+  # def update
+  #   binding.pry
+  #   @link = Link.find(params[:id])
+  #   @link.rating += 1
+  #   redirect links_path
+  # end
 
 end
