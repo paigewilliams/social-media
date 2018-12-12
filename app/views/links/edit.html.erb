@@ -1,0 +1,26 @@
+<h3>Commenting As</h3>
+<%= form_tag(link_path, method: "patch") do %>
+
+<div class="">
+
+  <%= select_tag(:user, options_for_select(@users.map { |user| [user.name, user.id] })) %>
+</div>
+
+<div class="">
+
+  <%= radio_button_tag(:rating, "+1") %>
+  <%= label_tag(:rating_val, "Upvote") %>
+  <%= radio_button_tag(:rating, "-1") %>
+  <%= label_tag(:rating_val, "Downvote") %>
+</div>
+
+
+<div class="">
+
+  <%= label_tag(:text, "Enter comment:") %>
+  <%= text_field_tag(:text) %>
+</div>
+
+
+  <%= submit_tag("Edit link") %>
+<% end %>
